@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title class="slide-effect-title">About Pandas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/slick/slick.css">
+  <link rel="stylesheet" href="assets/slick/slick-theme.css">
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+
+  <style>
+    nav {
+      background-color: transparent;
+    }
+    nav ul {
+      justify-content: center;
+      padding: 15px 0;
+    }
+    .content {
+      text-align: center;
+      margin: 20px 10px;
+    }
+
+    /* Background with pandas animations */
+    body {
+      justify-content: center;
+      align-items: center;
+      background: url("https://media0.giphy.com/media/fC4vvkZZNX1Tfnuxzt/giphy.webp?cid=ecf05e47h8c1vonsrrw3qgnk1g4tamhvtzt10w6kqftt68zv&ep=v1_gifs_search&rid=giphy.webp&ct=g"),
+      url("https://media3.giphy.com/media/CqDTYmxrpApGF9eI6q/giphy.webp?cid=ecf05e47l4kinoj0z92o9doylgeh5fnf0cta3w3dzwu3xs8p&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: animateBackground 10s linear infinite;
+    }
+
+    @keyframes animateBackground {
+      0% {
+        background-image: url("https://media0.giphy.com/media/fC4vvkZZNX1Tfnuxzt/giphy.webp?cid=ecf05e47h8c1vonsrrw3qgnk1g4tamhvtzt10w6kqftt68zv&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+      }
+      50% {
+        background-image: url("https://media3.giphy.com/media/CqDTYmxrpApGF9eI6q/giphy.webp?cid=ecf05e47l4kinoj0z92o9doylgeh5fnf0cta3w3dzwu3xs8p&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+      }
+    }
+
+    /* Special effects, animations, and visual enhancements */
+    .about-container {
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fade-in 1s forwards;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .highlight {
+      color: #ff5500;
+      font-weight: bold;
+      animation: zoom-in 0.5s ease-in-out infinite;
+    }
+
+    @keyframes zoom-in {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+
+    .slide-effect-title {
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideIn 1s forwards;
+    }
+
+    .slide-effect-subheading,
+    .typing-effect-paragraph {
+      opacity: 0;
+    }
+
+    @media (min-width: 768px) {
+      .slide-effect-title {
+        transform: translateY(-100%);
+        animation: slideIn 1s forwards;
+      }
+      .slide-effect-subheading,
+      .typing-effect-paragraph {
+        transform: translateY(100%);
+        animation: slideIn 1s forwards;
+      }
+    }
+
+    .slide-effect-subheading {
+      animation-delay: 1s;
+    }
+
+    .my-button {
+      background-color: transparent;
+      color: blue;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+    }
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flexbox;
+    }
+
+    .container {
+      flex: 1 1 200px;
+      min-height: 200px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      flex-shrink: 1; /* Set flex-shrink to make the items shrink */
+    }
+
+    .container:nth-child(2) {
+      flex-shrink: 2;
+    }
+
+    .container:nth-child(3) {
+      flex-shrink: 0;
+    }
+
+
+
+
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+    }
+
+
+
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
+      font-size: 20px;
+
+
+
+    .typing-effect-paragraph {
+      animation: typingEffectAnimation 4s steps(40) 1s forwards;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 0.15em solid #000;
+      width: 0;
+    }
+
+    @keyframes typingEffectAnimation {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    nav {
+      background-color: transparent;
+    }
+
+    nav ul {
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    .content {
+      text-align: center;
+      margin: 20px 10px;
+    }
+
+    /* Background with pandas animations */
+    body {
+      justify-content: center;
+      align-items: center;
+      background: url("https://media0.giphy.com/media/fC4vvkZZNX1Tfnuxzt/giphy.webp?cid=ecf05e47h8c1vonsrrw3qgnk1g4tamhvtzt10w6kqftt68zv&ep=v1_gifs_search&rid=giphy.webp&ct=g"),
+      url("https://media3.giphy.com/media/CqDTYmxrpApGF9eI6q/giphy.webp?cid=ecf05e47l4kinoj0z92o9doylgeh5fnf0cta3w3dzwu3xs8p&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: animateBackground 10s linear infinite;
+    }
+
+    @keyframes animateBackground {
+      0% {
+        background-image: url("https://media0.giphy.com/media/fC4vvkZZNX1Tfnuxzt/giphy.webp?cid=ecf05e47h8c1vonsrrw3qgnk1g4tamhvtzt10w6kqftt68zv&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+      }
+      50% {
+        background-image: url("https://media3.giphy.com/media/CqDTYmxrpApGF9eI6q/giphy.webp?cid=ecf05e47l4kinoj0z92o9doylgeh5fnf0cta3w3dzwu3xs8p&ep=v1_gifs_search&rid=giphy.webp&ct=g");
+      }
+    }
+
+    /* Special effects, animations, and visual enhancements */
+    .about-container {
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fade-in 1s forwards;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .highlight {
+      color: #ff5500;
+      font-weight: bold;
+      animation: zoom-in 0.5s ease-in-out infinite;
+    }
+
+    @keyframes zoom-in {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .slide-effect-title {
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideIn 1s forwards;
+    }
+
+    .slide-effect-subheading,
+    .typing-effect-paragraph {
+      opacity: 0;
+    }
+
+    @media (min-width: 768px) {
+      .slide-effect-title {
+        transform: translateY(-100%);
+        animation: slideIn 1s forwards;
+      }
+      .slide-effect-subheading,
+      .typing-effect-paragraph {
+        transform: translateY(100%);
+        animation: slideIn 1s forwards;
+      }
+    }
+
+    .slide-effect-subheading {
+      animation-delay: 1s;
+    }
+
+    .my-button {
+      background-color: transparent;
+      color: blue;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .container {
+      flex: 1 1 200px;
+      min-height: 200px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      flex-shrink: 1; /* Set flex-shrink to make the items shrink */
+    }
+
+    .container:nth-child(2) {
+      flex-shrink: 2;
+    }
+
+    .container:nth-child(3) {
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+    }
+
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .typing-effect-paragraph {
+      animation: typingEffectAnimation 4s steps(40) 1s forwards;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 0.15em solid #000;
+      width: 0;
+    }
+
+    @keyframes typingEffectAnimation {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+<header class="parallax-header" id="home"></header>
+<nav class="sticky-navigation">
+  <ul>
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="about.html" class="active">About Pandas</a>
+    </li>
+    <li>
+      <a href="location.html">Location Pandas</a>
+    </li>
+  </ul>
+</nav>
+</header>
+
+
+<div class="about-container fade-in">
+  <h1><a href="about.html">About Pandas</a></h1>
+  <p class="typing-effect-paragraph">Pandas are fascinating creatures known for their distinctive black and white markings. They are native to China and are considered a national treasure.</p>
+  <p class="typing-effect-paragraph">Pandas primarily feed on bamboo, consuming a large quantity of it daily to meet their dietary needs. They are known for their adorable appearance, with their round faces and fluffy bodies.</p><br>
+  <p class="highlight">Did you know?</p>
+  <p class="typing-effect-paragraph">The giant panda is recognized as an endangered species, and conservation efforts are crucial to protect their habitats and ensure their survival in the wild.</p><br>
+  <p class="typing-effect-paragraph">Our team of experts works tirelessly to protect pandas and their natural habitat. Through research, breeding programs, and education, we strive to ensure the survival of these incredible animals for future generations.</p><br><br>
+  <a href="#" class="btn btn-primary">Learn more</a>
+</div>
+
+<div class="about-container fade-in">
+  <h1 class="slide-effect-heading">Nature's Marvels</h1>
+
+  <div class="section">
+    <h2 class="typing-effect-subheading">Habitat and Distribution</h2>
+    <p class="typing-effect-paragraph">Pandas are native to the mountainous regions of central China, including Sichuan, Shaanxi, and Gansu provinces. They primarily inhabit bamboo forests at elevations of 5,000 to 10,000 feet. The dense bamboo forests provide them with the necessary food and shelter.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="typing-effect-subheading">Physical Characteristics</h2>
+    <p class="typing-effect-paragraph">Giant pandas are known for their unique black and white fur, round faces, and stocky bodies. They have large molar teeth and strong jaw muscles to chew bamboo effectively. Adult pandas can weigh between 200 to 330 pounds (90 to 150 kilograms) and reach a height of 3 to 4 feet (0.9 to 1.2 meters) at the shoulder.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="typing-effect-subheading">Diet and Feeding Habits</h2>
+    <p class="typing-effect-paragraph">Pandas are herbivores, with bamboo accounting for 99% of their diet. They have a specialized wrist bone that acts like a thumb, allowing them to grip bamboo stems. Pandas consume large quantities of bamboo daily, as much as 20 to 40 pounds (9 to 18 kilograms), to meet their nutritional needs.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="typing-effect-subheading">Reproduction and Life Cycle</h2>
+    <p class="typing-effect-paragraph">Female pandas have a reproductive cycle of around 2 to 3 years, and they are fertile for only 24 to 72 hours per year. After a gestation period of 5 to 6 months, a mother panda gives birth to one or two cubs. The cubs are born blind and rely on their mother for care and feeding.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="typing-effect-subheading">Conservation Status</h2>
+    <p class="typing-effect-paragraph">Giant pandas are listed as "Vulnerable" on the IUCN Red List of Threatened Species. Conservation efforts have played a crucial role in their recovery. The Chinese government has established nature reserves and implemented strict laws to protect panda habitats. Conservation organizations are also involved in research, breeding programs, and habitat preservation to ensure the survival of pandas.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="typing-effect-subheading">Behavior and Social Structure</h2>
+    <p class="typing-effect-paragraph">Pandas are generally solitary animals, with males and females coming together only during the breeding season. They are skilled climbers and spend most of their time in trees or foraging for bamboo on the ground. They have a relatively low metabolic rate, which helps conserve energy.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="typing-effect-subheading">Threats and Conservation Challenges</h2>
+    <p class="typing-effect-paragraph">The primary threats to pandas include habitat loss due to deforestation, fragmentation of their habitat, and the effects of climate change. Poaching was once a significant threat but has significantly reduced due to conservation efforts. Ongoing conservation challenges include ensuring sustainable bamboo forests, addressing human-wildlife conflicts, and mitigating the impacts of climate change.</p>
+  </div>
+
+  </footer>
+  <div class="menu">
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" class="active">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About Pandas</a>
+        </li>
+        <li>
+          <a href="location.html">Location Pandas</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="copy">&copy;2023 All rights reserved.</div>
+  <button class="my-button">Contact us</button>
+
+  </footer>
+
+
+
+  <script>
+
+
+    // Function to slide in the title and apply typing effect to headings and paragraphs
+    function slideAndTypeEffect() {
+      // Slide in the title
+      const title = document.querySelector(".slide-effect-title");
+      title.style.animation = "slideIn 1s forwards";
+
+      // Apply typing effect to headings
+      const headings = document.querySelectorAll(".typing-effect-heading");
+      headings.forEach(function(heading) {
+        const speed = 50; // Adjust typing speed (in milliseconds)
+        const originalText = heading.textContent.trim();
+        heading.textContent = "";
+        typeEffect(heading, speed, originalText);
+      });
+
+      // Apply typing effect to paragraphs
+      const paragraphs = document.querySelectorAll(".typing-effect-paragraph");
+      paragraphs.forEach(function(paragraph) {
+        const speed = 30; // Adjust typing speed (in milliseconds)
+        const originalText = paragraph.textContent.trim();
+        paragraph.textContent = "";
+        typeEffect(paragraph, speed, originalText);
+      });
+    }
+
+    // Typing effect function
+    function typeEffect(element, speed, originalText) {
+      let currentText = "";
+      let index = 0;
+
+      const typeInterval = setInterval(function() {
+        currentText += originalText[index];
+        element.textContent = currentText;
+        index++;
+
+        if (index === originalText.length) {
+          clearInterval(typeInterval);
+        }
+      }, speed);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Smooth scrolling
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('a[href^="#"]');
+
+      for (const link of links) {
+        link.addEventListener('click', smoothScroll);
+      }
+
+      function smoothScroll(event) {
+        event.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Modal window
+    document.addEventListener('DOMContentLoaded', function() {
+      const modalButton = document.querySelector('.open-modal');
+      const modal = document.querySelector('#modal');
+      const closeModalButton = document.querySelector('.close-modal');
+
+      modalButton.addEventListener('click', function() {
+        modal.style.display = 'block';
+      });
+
+      closeModalButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+    });
+
+
+
+
+    // Trigger slide and typing effect on page load
+    window.addEventListener("load", slideAndTypeEffect);
+
+
+
+  </script>
+
+
+  <script src="assets/js/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/slick/slick.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+footer {
+	padding: 50px;
+	background-color: var(--color-gray-ligth);
+	text-align: center;
+}
+.copy {
+	color: var(--color-gray-ligth3);
+}
+footer .menu {
+	margin-bottom: 50px;
+}
+footer nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+footer li a {
+	color: var(--color-gray-ligth3);
+}
+footer li a.active {
+	color: var(--color-gray);
+	text-decoration: underline;
+}

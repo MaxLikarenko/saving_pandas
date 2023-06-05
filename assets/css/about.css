@@ -1,0 +1,14 @@
+@import "variables.css";
+@import "common.css";
+
+nav {
+	background-color: var(--color-gray);
+}
+nav ul {
+	justify-content: center;
+	padding: 15px 0;
+}
+.content {
+	text-align: center;
+	margin: 20px 10px;
+}

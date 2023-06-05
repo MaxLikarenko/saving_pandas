@@ -1,0 +1,53 @@
+.benefits {
+	text-align: center;
+}
+.benefits .description {
+	margin-bottom: 50px;
+}
+.cards {
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.card {
+	width: 33%;
+	padding: 0 25px;
+}
+.card-header {
+	display: flex;
+	align-items: center;
+}
+.card-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 15px;
+	background-color: var(--color-gray-ligth);
+	margin-right: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card-icon .material-icons {
+	font-size: 30px;
+}
+.card-title {
+	font-size: 17px;
+	font-weight: bold;
+}
+.card-text {
+	padding-left: 65px;
+	text-align: left;
+	line-height: 22px;
+}
+
+@media all and (max-width: 750px) {
+	.cards {
+		flex-wrap: wrap;
+	}
+	.card {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}

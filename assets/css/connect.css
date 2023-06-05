@@ -1,0 +1,29 @@
+.connect .content {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+.connect .title {
+	text-transform: uppercase;
+}
+.connect .text {
+	margin-bottom: 30px;
+}
+.form input {
+	border: 2px solid var(--color-gray-ligth);
+	border-radius: 5px;
+	padding: 6px 10px;
+	font-size: 16px;
+}
+.form input:not(:last-child) {
+	margin-right: 10px;
+}
+.form-input::placeholder {
+	color: var(--color-gray-ligth2);
+}
+.form input.form-btn {
+	cursor: pointer;
+	background-color: var(--color-gray);
+	color: var(--color-white);
+	padding: 6px 20px;
+}
